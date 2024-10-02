@@ -1,0 +1,46 @@
+{
+  "name": "pretty-xml-preview",
+  "displayName": "Pretty XML Preview",
+  "description": "Instant XML Prettifier and Previewer",
+  "version": "0.0.1",
+  "publisher": "Appler",
+  "icon": "resources/icon.png",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appler1009/vscode-xml-prettify.git"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "prettyXmlPreview.open",
+        "title": "Pretty XML Preview: Open"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test",
+    "package": "npm version patch -m \"version %s\" && npm install && vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.60.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.9.1"
+  },
+  "dependencies": {
+    "highlight.js": "^11.10.0",
+    "xml-formatter": "^3.6.3"
+  }
+}
