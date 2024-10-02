@@ -2,9 +2,15 @@
   "name": "pretty-xml-preview",
   "displayName": "Pretty XML Preview",
   "description": "Instant XML Prettifier and Previewer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "Appler",
-  "keywords": ["xml", "format", "pretty", "preview", "highlight"],
+  "keywords": [
+    "xml",
+    "format",
+    "pretty",
+    "preview",
+    "highlight"
+  ],
   "icon": "resources/icon.png",
   "engines": {
     "vscode": "^1.60.0"
