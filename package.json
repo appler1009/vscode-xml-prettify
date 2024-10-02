@@ -2,7 +2,7 @@
   "name": "pretty-xml-preview",
   "displayName": "Pretty XML Preview",
   "description": "Instant XML Prettifier and Previewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Appler",
   "icon": "resources/icon.png",
   "engines": {
