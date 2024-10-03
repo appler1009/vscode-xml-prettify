@@ -53,8 +53,8 @@ function activate(context) {
 function deactivate() { }
 
 const XML_PREPROCESSORS = [
-  (input) => input,
   (input) => input.replace(/\\"/g, '"'),
+  (input) => input,
 ];
 
 function updatePrettifiedXML(context) {
