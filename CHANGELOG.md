@@ -1,4 +1,3 @@
-### Bug Fixes
+### Bug Fixes and Improvements
 
-- Handle quotations better with escaped XML strings
-- Keeping only one preview
+- Updates to README
