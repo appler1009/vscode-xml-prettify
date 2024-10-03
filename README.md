@@ -36,7 +36,7 @@ Alternatively, you can download the `.vsix` file from the releases page and inst
 
 ## Requirements
 
-This extension requires Visual Studio Code version 1.60.0 or higher. That was August 2021.
+This extension requires Visual Studio Code version 1.60.0 or higher which was released in August 2021.
 
 ## Contributing
 
