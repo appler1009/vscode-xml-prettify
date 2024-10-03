@@ -33,12 +33,13 @@ function activate(context) {
   }
 
   const disposable = vscode.commands.registerCommand('prettyXmlPreview.open', function () {
-    // The code you place here will be executed every time your command is executed
-    panel = createWebviewPanel(context);
-    updatePrettifiedXML(context);
-
-    // Display a message box to the user
-    // vscode.window.showInformationMessage('Hello World from pretty-xml!');
+    if (panel) {
+      panel.reveal(vscode.ViewColumn.Beside);
+    }
+    else {
+      panel = createWebviewPanel(context);
+      updatePrettifiedXML(context);
+    }
   });
 
   context.subscriptions.push(disposable);
