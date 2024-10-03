@@ -101,7 +101,7 @@ function updatePrettifiedXML(context) {
 }
 
 function createWebviewPanel(context) {
-  let panel = vscode.window.createWebviewPanel(
+  let newPanel = vscode.window.createWebviewPanel(
     'prettyXmlPreview',
     'Pretty XML Preview',
     vscode.ViewColumn.Beside,
@@ -110,7 +110,15 @@ function createWebviewPanel(context) {
     }
   );
 
-  panel.webview.onDidReceiveMessage(
+  newPanel.onDidDispose(
+    () => {
+      panel = undefined;
+    },
+    null,
+    context.subscriptions
+  );
+
+  newPanel.webview.onDidReceiveMessage(
     message => {
       switch (message.command) {
         case 'themeChanged':
@@ -134,7 +142,7 @@ function createWebviewPanel(context) {
     context.subscriptions
   );
 
-  return panel;
+  return newPanel;
 }
 
 function getWebviewContent(content) {
