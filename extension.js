@@ -28,10 +28,6 @@ function activate(context) {
   wrap = context.globalState.get(GLOBAL_STATE_WRAP_TOGGLE, false);
   sticky = context.globalState.get(GLOBAL_STATE_STICKY_TOGGLE, true);
 
-  if (Math.random() < 0.6) {
-    showBMC = true;
-  }
-
   const disposable = vscode.commands.registerCommand('prettyXmlPreview.open', function () {
     if (panel) {
       panel.reveal(vscode.ViewColumn.Beside);
@@ -101,6 +97,8 @@ function updatePrettifiedXML(context) {
 }
 
 function createWebviewPanel(context) {
+  showBMC = (Math.random() < 0.6);
+
   let newPanel = vscode.window.createWebviewPanel(
     'prettyXmlPreview',
     'Pretty XML Preview',
