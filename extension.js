@@ -42,6 +42,9 @@ function activate(context) {
 
   // listen to the selection change event
   vscode.window.onDidChangeTextEditorSelection(() => {
+    if (!panel) {
+      return;  // it will prevent the panel to reopen when the selection changes
+    }
     updatePrettifiedXML(context);
   }, null, context.subscriptions);
 }
